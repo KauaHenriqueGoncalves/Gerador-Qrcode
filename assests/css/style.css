@@ -1,0 +1,99 @@
+:root {
+    --background: #181818;
+    --dark: #191921;
+    --dark-100: #262a35;
+    --blue: #1d5af3;
+    --color-font: #dbdddc;
+}
+
+html {
+    font-family: system-ui, -apple-system, sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0 1rem;
+    background-color: var(--background);
+}
+
+input, button { font-size: 1.5rem; }
+
+.container-qrcode {
+    box-sizing: border-box;
+    width: clamp(25rem, 34rem, 34rem);
+    padding: 1.5rem 1rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px var(--dark-100);
+    background-color: var(--dark-100);
+}
+
+.main-form { border: none; }
+
+.main-form > legend {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .4rem;
+    color: var(--color-font);
+}
+
+.form-line {
+    display: flex;
+    column-gap: .5rem;
+}
+
+.form-line > * {
+    padding: .8rem .6rem;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+#inUrl { 
+    flex-grow: 1;
+    color: var(--color-font);
+    background-color: color-mix(in srgb, var(--dark-100), #fff 10%); 
+}
+#inUrl:focus { outline: 2px solid var(--blue); }
+
+.btn {
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow .1s ease-in-out;
+    color: var(--color-font);
+    background-color: var(--blue);
+}
+.btn:hover { opacity: .9; }
+.btn:active { opacity: .8; }
+
+#outQrcode {
+    display: flex;
+    column-gap: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: color-mix(in srgb, var(--dark-100), #fff 10%);
+}
+
+.buttons-qrcode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: .5rem;
+}
+
+.buttons-qrcode > *{ width: 100%; }
+
+.btnClear { background-color: #dd0000; }
+.btnDownload { background-color: #008000; }
